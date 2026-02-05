@@ -1,0 +1,277 @@
+/* =========================
+   HERO + FORM (SPLIT)
+   ========================= */
+
+/* ÖNEMLİ: heroSplit'e width VERME! */
+.heroSplit {
+  padding: 38px 0 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
+      overflow: hidden;
+}
+/* Arkaplan foto */
+.heroSplit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/hero/h05.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: .16;
+  /* transparanlık */
+  filter: blur(0.5px);
+  /* hafif blur */
+  transform: scale(1.06);
+  /* blur sonrası kenar boşluğu olmasın */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Foto üstüne soft beyaz katman (okunabilirlik) */
+.heroSplit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hero içeriği üstte kalsın */
+.heroSplit__inner,
+.heroStrip {
+  position: relative;
+  z-index: 1;
+}
+/* Bu section içindeki container'ı daha geniş yapıyoruz (daha sola/sağa yayılır) */
+.heroSplit .container {
+  width: min(1400px, 98%);
+  margin: 0 auto;
+}
+
+/* Grid */
+.heroSplit__inner {
+  display: grid;
+  grid-template-columns: minmax(560px, 1fr) minmax(440px, 560px);
+  gap: 64px;
+  /* arayı aç */
+  align-items: start;
+  justify-content: space-between;
+}
+
+/* Sol taraf */
+.heroSplit__left {
+  padding-top: 18px;
+  /* biraz aşağı al */
+  padding-left: 0;
+  /* sola ekstra padding KALDIR */
+}
+
+/* Başlık */
+.heroSplit__title {
+  margin: 0;
+  font-size: 56px;
+  line-height: 1.03;
+  letter-spacing: -1px;
+  font-weight: 900;
+
+  /* Tek satır istersen:
+     - Masaüstünde tek satır
+     - Daralınca otomatik kırılır */
+  white-space: nowrap;
+}
+
+.heroSplit__lead {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* 3'lü bilgi */
+.heroSplit__info {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.heroInfoItem {
+  padding: 10px 10px;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.heroInfoK {
+  display: block;
+  font-weight: 900;
+  font-size: 16px;
+  color: #111;
+}
+
+.heroInfoV {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+/* Aksiyon butonları */
+.heroSplit__actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Sağ taraf (form) */
+.heroSplit__right {
+  display: flex;
+  justify-content: flex-end;
+  /* form sağ sütunun sağına otursun */
+}
+
+.heroFormCard {
+  width: 100%;
+  max-width: 560px;
+  /* biraz büyüt */
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(17, 24, 39, .10);
+  padding: 22px;
+}
+
+.heroFormTop {
+  margin-bottom: 10px;
+}
+
+.heroFormTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.heroFormSubtitle {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Mini kutular */
+.heroMiniRow {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.heroMini {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+}
+
+.heroMini strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.heroMini span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Alt görsel şerit */
+.heroStrip {
+  padding-top: 6px;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.heroStripItem {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.07);
+  height: 175px;
+}
+
+.heroStripItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.heroStripItem:hover img {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .heroSplit__title {
+    white-space: normal;
+    /* daralınca kırıl */
+    font-size: 48px;
+  }
+
+  .heroSplit__inner {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .heroSplit__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .heroSplit__right {
+    justify-content: flex-start;
+  }
+
+  .heroFormCard {
+    max-width: 100%;
+  }
+
+  .heroSplit__info {
+    grid-template-columns: 1fr;
+  }
+
+  .heroMiniRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heroStrip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroStripItem {
+    height: 190px;
+  }
+}
+
+@media (max-width: 560px) {
+  .heroStrip {
+    grid-template-columns: 1fr;
+  }
+}

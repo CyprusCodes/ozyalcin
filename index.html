@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Oliva 2 by Özyalçın — Proje Detayı (Demo)</title>
+  <meta name="description" content="Casa Oliva 2 by Özyalçın — Proje Detay Sayfası (Demo)" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+<header class="siteHeader" id="top">
+  <!-- ÜST SATIR: LOGO + DİL + MENÜ + ARAMA -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Casa Oliva 2">
+        <img class="brandLogo" src="/images/brand/casa-oliva-logo.png" alt="Casa Oliva 2" />
+      </a>
+
+      <a class="langLink" href="#" onclick="return false;">
+
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Ana Menü">
+        <a href="#iletisim">Form</a>
+        <a href="#genel-bakis">Genel Bakış</a>
+        <a href="#proje-ozellikleri">Proje Özellikleri</a>
+        <a href="#vaziyet-plani">Vaziyet Planı</a>
+        <a href="#proje-fotograflari">Proje Fotoğrafları</a>
+
+
+
+      </nav>
+
+      <button class="searchBtn" type="button" aria-label="Ara" onclick="return false;">
+        <span class="searchIcon">⌕</span>
+      </button>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Menü">☰</button>
+    </div>
+  </div>
+
+  <!-- ALT SATIR: TELEFON + SOSYAL -->
+  <div class="topInfoBar">
+    <div class="container topInfoBar__inner">
+      <div class="topInfoLeft">
+        <a class="infoLink" href="tel:+903926502900">
+          <span class="infoIco">☎</span> +90 (392) 650 2900
+        </a>
+        <a class="infoLink" href="tel:+905488502900">
+          <span class="infoIco">☎</span> +90 (548) 850 2900
+        </a>
+      </div>
+
+      <div class="topInfoRight">
+        <span class="follow">Bizi takip edin</span>
+        <a class="socialBtn" href="#" onclick="return false;" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.8V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+          </svg>
+        </a>
+
+        <a class="socialBtn" href="#" onclick="return false;" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 21h4V9H3v12zm7 0h4v-6.2c0-1.7.3-3.3 2.4-3.3 2.1 0 2.1 2 2.1 3.4V21h4V14c0-3.4-.7-6-4.7-6-1.9 0-3.2 1-3.7 2h-.1V9H10v12z" />
+          </svg>
+        </a>
+
+        <a class="socialBtn" href="#" onclick="return false;" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3zM17.8 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accentBar"></div>
+</header>
+
+
+<!-- Sarı şerit -->
+<div class="accentBar"></div>
+
+
+
+<!-- HERO + FORM (SPLIT) -->
+<section class="heroSplit" id="top">
+  <div class="container heroSplit__inner">
+    <!-- SOL: HERO İÇERİK -->
+    <div class="heroSplit__left">
+      <h1 class="heroSplit__title">Casa Oliva 2 by Özyalçın</h1>
+      <p class="heroSplit__lead">DOĞA İLE DOST, DOĞA İLE UYUMLU BİR YAŞAM.</p>
+
+      <div class="heroSplit__info" aria-label="Proje Kısa Bilgiler">
+        <div class="heroInfoItem">
+          <span class="heroInfoK">Şehir</span>
+          <span class="heroInfoV">Girne</span>
+        </div>
+        <div class="heroInfoItem">
+          <span class="heroInfoK">Tapu</span>
+          <span class="heroInfoV">Türk Tapulu</span>
+        </div>
+        <div class="heroInfoItem">
+          <span class="heroInfoK">Bölge</span>
+          <span class="heroInfoV">Zeytinlik</span>
+        </div>
+      </div>
+
+      <div class="heroSplit__actions">
+        <a class="btn btn--ghost btn--primary btn--lg" href="#iletisim">Hızlı Bilgi Al</a>
+        <a class="btn btn--ghost btn--lg" href="#proje-fotograflari">Fotoğraflar</a>
+      </div>
+    </div>
+
+    <!-- SAĞ: FORM -->
+    <div class="heroSplit__right" id="iletisim">
+      <div class="heroFormCard">
+        <div class="heroFormTop">
+          <h2 class="heroFormTitle">Bilgi almak için form doldurun</h2>
+          <p class="muted heroFormSubtitle">
+            Size en kısa sürede dönüş yapabilmemiz için bilgilerinizi bırakın.
+          </p>
+        </div>
+
+        <form class="form heroForm" id="demoForm">
+          <label>
+            Ad Soyad
+            <input type="text" placeholder="Adınız ve soyadınız" />
+          </label>
+
+          <label>
+            Telefon
+            <input type="tel" placeholder="(05xx) xxx xx xx" />
+          </label>
+
+          <label>
+            E-posta
+            <input type="email" placeholder="ornek@mail.com" />
+          </label>
+
+          <label>
+            Mesaj
+            <textarea rows="4" placeholder="Kısaca talebinizi yazın..."></textarea>
+          </label>
+
+          <button class="btn btn--primary heroFormBtn" type="submit">Gönder (Demo)</button>
+          <p class="tiny muted heroFormNote">Demo: Bu form şu an herhangi bir yere gönderim yapmaz.</p>
+        </form>
+
+        <div class="heroMiniRow">
+          <div class="heroMini">
+            <strong>Hızlı dönüş</strong>
+            <span>Genelde aynı gün dönüş.</span>
+          </div>
+          <div class="heroMini">
+            <strong>Türk Tapulu</strong>
+            <span>Güvenli yatırım fırsatı.</span>
+          </div>
+          <div class="heroMini">
+            <strong>Girne / Zeytinlik</strong>
+            <span>Merkeze dakikalar.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALT GÖRSEL ŞERİT (opsiyonel ama çok iyi durur) -->
+  <div class="container heroStrip">
+    <a class="heroStripItem gItem" data-full="/images/hero/h01.jpg" aria-label="Görseli büyüt">
+      <img src="/images/hero/h01.jpg" alt="Casa Oliva 2 görsel 1" />
+    </a>
+    <a class="heroStripItem gItem" data-full="/images/hero/h02.jpg" aria-label="Görseli büyüt">
+      <img src="/images/hero/h02.jpg" alt="Casa Oliva 2 görsel 2" />
+    </a>
+    <a class="heroStripItem gItem" data-full="/images/hero/h03.jpg" aria-label="Görseli büyüt">
+      <img src="/images/hero/h03.jpg" alt="Casa Oliva 2 görsel 3" />
+    </a>
+    <a class="heroStripItem gItem" data-full="/images/hero/h04.jpg" aria-label="Görseli büyüt">
+      <img src="/images/hero/h04.jpg" alt="Casa Oliva 2 görsel 4" />
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- GENEL BAKIŞ -->
+  <section class="section" id="genel-bakis">
+    <div class="container">
+      <div class="overview">
+        <div class="overviewGrid">
+          <!-- Görsel -->
+          <a class="overviewMedia gItem" data-full="/images/proje/p01.jpg" aria-label="Genel bakış görselini büyüt">
+            <img src="/images/hero/h05.png" alt="Casa Oliva 2 genel bakış görseli" />
+          </a>
+
+          <!-- İçerik -->
+          <div class="overviewBody">
+            <div class="overviewTop">
+              <h2 class="overviewTitle">Genel Bakış</h2>
+              <div class="overviewChips" aria-label="Kısa etiketler">
+                <span class="chip">Girne / Zeytinlik</span>
+                <span class="chip">Türk Tapulu</span>
+                <span class="chip">Butik Proje</span>
+              </div>
+            </div>
+
+            <p class="overviewText muted">
+              Doğanın içinde, şehrin hemen yanı başında. Casa Oliva 2; Zeytinlik’in sakin dokusunda, merkez ve sahile
+              dakikalar mesafede konumlanan butik bir yaşam projesidir.
+            </p>
+
+            <div class="overviewKpis" aria-label="Öne çıkan bilgiler">
+              <div class="kpi">
+                <div class="kpiVal">4.000 m²</div>
+                <div class="kpiLbl">Proje alanı</div>
+              </div>
+              <div class="kpi">
+                <div class="kpiVal">10 Villa</div>
+                <div class="kpiLbl">A / B / C Tipi</div>
+              </div>
+              <div class="kpi">
+                <div class="kpiVal">3+1</div>
+                <div class="kpiLbl">2 katlı plan</div>
+              </div>
+            </div>
+
+            <div class="overviewActions">
+              <a class="btn btn--ghost btn--primary btn--lg" href="#iletisim">Bilgi Al</a>
+              <a class="btn btn--ghost btn--primary btn--lg" href="#proje-fotograflari">Fotoğraflara Git</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJE ÖZELLİKLERİ -->
+  <section class="section" id="proje-ozellikleri">
+    <div class="container">
+      <h2>Proje Özellikleri</h2>
+      <p class="muted">
+        Bu bölümde referanstaki gibi madde madde, ama daha okunabilir modern bir düzen kuracağız.
+        Aşağıdaki maddeler örnek; sen içerikleri gönderince birebir yerleştireceğim.
+      </p>
+
+      <div class="section section--alt" style="padding:18px 0; border-radius:16px;">
+        <div class="container" style="padding:0;">
+          <ul class="bullets">
+            <li>Casa Oliva 2, Girne’nin Zeytinlik bölgesinde bulunmaktadır.</li>
+            <li>Konumu gereği denize, prestijli otellere, Girne şehir merkezine, özel hastanelere ve okullara yakın bir konumda yer
+            almaktadır.</li>
+            <li>Toplam 4.000 m2’lik bir proje alanına sahiptir.</li>
+            <li>Türk Tapulu arazide konumlandırılmıştır.</li>
+            <li>A, B ve C Tipi olmak üzere 10 adet villadan oluşmaktadır.</li>
+            <li>Tüm villalar (3+1); zemin kat ve birinci kat olmak üzere 2 katlıdır.</li>
+            <li>181 m2 inşaat alanı ve 44 m2 toplam teras alanına sahiptir.</li>
+            <li>Zemin katta: içeride; giriş holü, salon, mutfak, bahçe deposu, garaj ve misafir WC, dışarıda; üstü açık ve kapalı
+            teras, giriş terası, iç bahçe ve havuz yer almaktadır. Birinci katta: zemin kattan çıkan betonarme merdiven, galeri
+            boşluğu, koridor, 1 adet çamaşır odası, 1 adet ebeveyn yatak odası (en-suite), 2 adet yatak odası, 1 adet ortak
+            kullanımlı WC&DUŞ, 1 adet ebeveyn yatak odası balkonu ve yatak odalarından erişimi olan 1 adet balkon terası yer
+            almaktadır.</li>
+            <li>Projemizde yer alan tüm villalarımızda, yüzme havuzu, özel tasarlanmış peyzaj, çamaşır odası, salonda cam kapaklı
+            şömine, ayrı mutfak, ve merkezi VRF iklimlendirme sistemi standart olarak sunulmaktadır.</li>
+            <li>Yerden ısıtma sistemi ve jeneratör opsiyonel olarak sunulmaktadır. İnternet, uydu, telefon ve kamera alt yapısı
+            bulunmaktadır.
+            <li>1. sınıf elektrik malzeme, led spot aydınlatma ve çevre aydınlatmaları kullanılmıştır.</li>
+            <li>İç mekanlarımızda 1. sınıf yer seramiği ve laminant parke kullanılmıştır.</li>
+            <li>Merdiven basamakları ise doğal mermer kaplamadır.</li>
+            <li>Tüm villalarımızdada 5 ton plastik gömme su deposu, sıcak su güneş kolektör sistemi bulunmaktadır.</li>
+            <li> Duvarlarda dış cephede ısı yalıtımlı eco-therm tuğla, iç mekanlarda ise standart tuğla kullanılmıştır.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- KATALOG / BUTON KART -->
+  <section class="section" id="katalog">
+    <div class="container">
+      <h2>Online Katalog</h2>
+      <p class="muted">
+        Online kataloğumuza buradan ulaşabilirsiniz. (Demo buton — gerçek link eklenebilir.)
+      </p>
+
+      <div class="infoCard" style="grid-template-columns: 1fr; text-align:center;">
+        <div class="kv" style="padding:6px 6px 14px;">
+          <span class="v" style="color:var(--muted); font-weight:700;">
+            3D online katalog bağlantısı / PDF indirme alanı
+          </span>
+        </div>
+
+        <div style="display:flex; justify-content:center; padding-bottom:4px;">
+          <a class="btn btn--primary" href="#" onclick="return false;">3D Online Katalog (Demo)</a>
+        </div>
+
+        <p class="tiny muted" style="margin:6px 0 0;">
+          Demo: Sunumda buton görünür, bağlantı sonra eklenebilir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VAZİYET PLANI -->
+  <section class="section section--alt" id="vaziyet-plani">
+    <div class="container">
+      <h2>Vaziyet Planı</h2>
+      <p class="muted">
+        Burada tek büyük görsel olacak. Tıklayınca büyük açılır. (Vaziyet planı görselini /assets/plan.jpg
+        yapabilirsin.)
+      </p>
+
+      <div class="gallery" style="grid-template-columns: 1fr;">
+        <button class="gItem" data-full="/assets/plan.jpg" aria-label="Vaziyet planını büyüt">
+          <img src="/public/images/plan/plan.jpg" alt="Casa Oliva 2 vaziyet planı" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJE FOTOĞRAFLARI -->
+  <section class="section section--alt" id="proje-fotograflari">
+    <div class="container">
+      <div class="sliderHeader">
+        <h2>Proje Fotoğrafları</h2>
+
+        <div class="sliderControls">
+          <button class="sliderBtn" type="button" data-dir="-1" data-target="disSlider"
+            aria-label="Sola Kaydır">‹</button>
+          <button class="sliderBtn" type="button" data-dir="1" data-target="disSlider" aria-label="Sağa Kaydır">›</button>
+        </div>
+      </div>
+
+      <div class="photoSlider" id="disSlider">
+        <div class="photoTrack">
+          <img src="/images/proje/p01.jpg" alt="Proje fotoğrafı 1" />
+          <img src="/images/proje/p02.jpg" alt="Proje fotoğrafı 2" />
+          <img src="/images/proje/p03.jpg" alt="Proje fotoğrafı 3" />
+          <img src="/images/proje/p04.jpg" alt="Proje fotoğrafı 4" />
+          <img src="/images/proje/p05.jpg" alt="Proje fotoğrafı 5" />
+          <img src="/images/proje/p06.jpg" alt="Proje fotoğrafı 6" />
+          <img src="/images/proje/p07.jpg" alt="Proje fotoğrafı 7" />
+          <img src="/images/proje/p08.jpg" alt="Proje fotoğrafı 8" />
+          <img src="/images/proje/p09.jpg" alt="Proje fotoğrafı 9" />
+          <img src="/images/proje/p10.jpg" alt="Proje fotoğrafı 10" />
+          <img src="/images/proje/p11.jpg" alt="Proje fotoğrafı 11" />
+          <img src="/images/proje/p12.jpg" alt="Proje fotoğrafı 12" />
+          <img src="/images/proje/p13.jpg" alt="Proje fotoğrafı 13" />
+          <img src="/images/proje/p14.jpg" alt="Proje fotoğrafı 14" />
+          <img src="/images/proje/p15.jpg" alt="Proje fotoğrafı 15" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A-TİPİ -->
+  <section class="section section--alt" id="a-tipi">
+    <div class="container">
+      <div class="sliderHeader">
+        <h2>A Tipi İç Mimari</h2>
+
+        <div class="sliderControls">
+          <button class="sliderBtn" type="button" data-dir="-1" data-target="aSlider" aria-label="Sola Kaydır">‹</button>
+          <button class="sliderBtn" type="button" data-dir="1" data-target="aSlider" aria-label="Sağa Kaydır">›</button>
+        </div>
+      </div>
+
+      <div class="photoSlider" id="aSlider">
+        <div class="photoTrack">
+          <img src="/images/a-tipi/a01.jpg" alt="A tipi iç mimari 1" />
+          <img src="/images/a-tipi/a02.jpg" alt="A tipi iç mimari 2" />
+          <img src="/images/a-tipi/a03.jpg" alt="A tipi iç mimari 3" />
+          <img src="/images/a-tipi/a04.jpg" alt="A tipi iç mimari 4" />
+          <img src="/images/a-tipi/a05.jpg" alt="A tipi iç mimari 5" />
+          <img src="/images/a-tipi/a06.jpg" alt="A tipi iç mimari 6" />
+          <img src="/images/a-tipi/a07.jpg" alt="A tipi iç mimari 7" />
+          <img src="/images/a-tipi/a08.jpg" alt="A tipi iç mimari 8" />
+          <img src="/images/a-tipi/a09.jpg" alt="A tipi iç mimari 9" />
+          <img src="/images/a-tipi/a10.jpg" alt="A tipi iç mimari 10" />
+          <img src="/images/a-tipi/a11.jpg" alt="A tipi iç mimari 11" />
+          <img src="/images/a-tipi/a12.jpg" alt="A tipi iç mimari 12" />
+          <img src="/images/a-tipi/a13.jpg" alt="A tipi iç mimari 13" />
+          <img src="/images/a-tipi/a14.jpg" alt="A tipi iç mimari 14" />
+          <img src="/images/a-tipi/a15.jpg" alt="A tipi iç mimari 15" />
+          <img src="/images/a-tipi/a16.jpg" alt="A tipi iç mimari 16" />
+          <img src="/images/a-tipi/a17.jpg" alt="A tipi iç mimari 17" />
+          <img src="/images/a-tipi/a18.jpg" alt="A tipi iç mimari 18" />
+          <img src="/images/a-tipi/a19.jpg" alt="A tipi iç mimari 19" />
+          <img src="/images/a-tipi/a20.jpg" alt="A tipi iç mimari 20" />
+          <img src="/images/a-tipi/a21.jpg" alt="A tipi iç mimari 21" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- C-TİPİ -->
+  <section class="section" id="c-tipi">
+    <div class="container">
+      <div class="sliderHeader">
+        <h2>C Tipi İç Mimari</h2>
+
+        <div class="sliderControls">
+          <button class="sliderBtn" type="button" data-dir="-1" data-target="cSlider" aria-label="Sola Kaydır">‹</button>
+          <button class="sliderBtn" type="button" data-dir="1" data-target="cSlider" aria-label="Sağa Kaydır">›</button>
+        </div>
+      </div>
+
+      <div class="photoSlider" id="cSlider">
+        <div class="photoTrack">
+          <img src="/images/c-tipi/c01.jpg" alt="C tipi iç mimari 1" />
+          <img src="/images/c-tipi/c02.jpg" alt="C tipi iç mimari 2" />
+          <img src="/images/c-tipi/c03.jpg" alt="C tipi iç mimari 3" />
+          <img src="/images/c-tipi/c04.jpg" alt="C tipi iç mimari 4" />
+          <img src="/images/c-tipi/c05.jpg" alt="C tipi iç mimari 5" />
+          <img src="/images/c-tipi/c06.jpg" alt="C tipi iç mimari 6" />
+          <img src="/images/c-tipi/c07.jpg" alt="C tipi iç mimari 7" />
+          <img src="/images/c-tipi/c08.jpg" alt="C tipi iç mimari 8" />
+          <img src="/images/c-tipi/c09.jpg" alt="C tipi iç mimari 9" />
+          <img src="/images/c-tipi/c10.jpg" alt="C tipi iç mimari 10" />
+          <img src="/images/c-tipi/c11.jpg" alt="C tipi iç mimari 11" />
+          <img src="/images/c-tipi/c12.jpg" alt="C tipi iç mimari 12" />
+          <img src="/images/c-tipi/c13.jpg" alt="C tipi iç mimari 13" />
+          <img src="/images/c-tipi/c14.jpg" alt="C tipi iç mimari 14" />
+          <img src="/images/c-tipi/c15.jpg" alt="C tipi iç mimari 15" />
+          <img src="/images/c-tipi/c16.jpg" alt="C tipi iç mimari 16" />
+          <img src="/images/c-tipi/c17.jpg" alt="C tipi iç mimari 17" />
+          <img src="/images/c-tipi/c18.jpg" alt="C tipi iç mimari 18" />
+          <img src="/images/c-tipi/c19.jpg" alt="C tipi iç mimari 19" />
+          <img src="/images/c-tipi/c20.jpg" alt="C tipi iç mimari 20" />
+          <img src="/images/c-tipi/c21.jpg" alt="C tipi iç mimari 21" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- KONUM -->
+  <section class="section section--alt" id="konum">
+    <div class="container">
+      <h2>Konum</h2>
+      <p class="muted">
+        Bu alanı istersen harita / yakınlık maddeleriyle modernleştiririz (merkez, okullar, market, sahil vb.).
+      </p>
+
+      <div class="infoCard" style="grid-template-columns: 1fr;">
+        <div class="kv">
+          <span class="k">Yakın Noktalar (Örnek)</span>
+          <span class="v">Şehir merkezi • Okullar • Market • Sahil</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- FOOTER  -->
+<footer class="footerV2" id="footer">
+  <div class="container">
+
+    <!-- CTA KART -->
+    <div class="footerCta">
+      <div class="footerCta__left">
+        <div class="footerLogoMark" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div>
+          <div class="footerCta__title">Hayalinizdeki ev bir tık kadar yakın</div>
+          <div class="footerCta__sub muted">Bilgi almak için bizimle iletişime geçin.</div>
+        </div>
+      </div>
+
+      <a class="footerCta__btn" href="#iletisim">✉ İletişim</a>
+    </div>
+
+    <!-- ALT FOOTER -->
+    <div class="footerGrid">
+      <div class="footerBrand">
+        <div class="footerBrand__name">Casa Oliva 2</div>
+        <div class="footerBrand__sub muted">by Özyalçın</div>
+      </div>
+
+      <div class="footerCol">
+        <div class="footerCol__title">Müşteri</div>
+        <a href="#" onclick="return false;">Sıkça Sorulan Sorular</a>
+        <a href="#" onclick="return false;">Kıbrıs Rehberi</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+
+      <div class="footerCol">
+        <div class="footerCol__title">Projeler</div>
+        <a href="#" onclick="return false;">Tüm Projeler</a>
+        <a href="#" onclick="return false;">Satışı Devam Eden Projeler</a>
+        <a href="#" onclick="return false;">Satışı Tamamlanan Projeler</a>
+      </div>
+
+      <div class="footerCol">
+        <div class="footerCol__title">Kurumsal</div>
+        <a href="#" onclick="return false;">Hakkımızda</a>
+
+        <div class="footerSocial">
+          <a class="socialBtn" href="#" onclick="return false;" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.8V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+            </svg>
+          </a>
+
+          <a class="socialBtn" href="#" onclick="return false;" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 21h4V9H3v12zm7 0h4v-6.2c0-1.7.3-3.3 2.4-3.3 2.1 0 2.1 2 2.1 3.4V21h4V14c0-3.4-.7-6-4.7-6-1.9 0-3.2 1-3.7 2h-.1V9H10v12z" />
+            </svg>
+          </a>
+
+          <a class="socialBtn" href="#" onclick="return false;" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3zM17.8 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="footerCopy muted">
+          Telif Hakkı © <span id="yil"></span> <strong>Özyalçın Group.</strong> Tüm Hakları Saklıdır.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" aria-label="Kapat">✕</button>
+    <img id="lbImg" alt="Büyük görsel" />
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

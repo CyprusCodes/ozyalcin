@@ -1,0 +1,10 @@
+@import "./styles/00-variables.css";
+@import "./styles/01-base.css";
+@import "./styles/02-header.css";
+@import "./styles/03-hero.css";
+@import "./styles/04-sections.css";
+@import "./styles/05-form.css";
+@import "./styles/06-contact-visuals.css";
+@import "./styles/07-slider.css";
+@import "./styles/08-gallery-lightbox.css";
+@import "./styles/09-footer.css";

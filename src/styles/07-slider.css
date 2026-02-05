@@ -1,0 +1,71 @@
+.sliderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sliderControls {
+  display: flex;
+  gap: 8px;
+}
+
+.sliderBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.sliderBtn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(242, 194, 0, .18);
+}
+
+/* slider alanı */
+.photoSlider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: 16px;
+}
+
+.photoSlider::-webkit-scrollbar {
+  display: none;
+}
+
+.photoTrack {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+}
+
+/* 5'li görünüm */
+.photoTrack img {
+  flex: 0 0 calc((100% - 56px) / 5);
+  height: 240px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+}
+
+@media (max-width:1100px) {
+  .photoTrack img {
+    flex-basis: calc((100% - 28px) / 3);
+  }
+}
+
+@media (max-width:700px) {
+  .photoTrack img {
+    flex-basis: 85%;
+    height: 260px;
+  }
+}
