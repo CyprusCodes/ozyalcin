@@ -2,6 +2,10 @@
   padding: 42px 0;
 }
 
+#genel-bakis {
+  padding: 170px 0;
+}
+
 .section--alt {
   background: #f8fafc;
   border-top: 1px solid var(--line);
@@ -77,118 +81,170 @@
   transition: transform .3s ease;
 }
 
-/* GENEL BAKIŞ */
+/* =========================================================
+   GENEL BAKIŞ — PREMIUM / WIDE
+   ========================================================= */
 
-.overview {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: 0 14px 40px rgba(17, 24, 39, 0.08);
-  padding: 20px 22px;
+
+.container--wide {
+  width: min(1320px, 94%);
+  margin: 0 auto;
 }
-.overviewBody {
-  padding-right: 6px;
+
+
+.overview--premium {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  padding: 48px 56px;
+  background:
+    radial-gradient(900px 500px at 10% 0%, rgba(242, 194, 0, .10), transparent 60%),
+    radial-gradient(800px 520px at 100% 30%, rgba(17, 24, 39, .06), transparent 55%),
+    #fff;
+  border: 1px solid rgba(17, 24, 39, .08);
+  box-shadow: 0 30px 90px rgba(17, 24, 39, .10);
 }
+
+
+.overview--premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+
 .overviewGrid {
+  position: relative;
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 22px;
+  grid-template-columns: minmax(520px, 600px) 1fr;
+  gap: 34px;
   align-items: center;
 }
 
-/* görsel kart */
+
 .overviewMedia {
   display: block;
-  border-radius: 22px;
+  border-radius: 26px;
   overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: 0 18px 50px rgba(17, 24, 39, 0.12);
-  aspect-ratio: 5 / 4;
+  border: 1px solid rgba(17, 24, 39, .10);
   background: #fff;
+  box-shadow: 0 28px 70px rgba(17, 24, 39, .16);
+  aspect-ratio: 16 / 11;
+  min-height: 400px;
 }
 
 .overviewMedia img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .35s ease;
 }
 
-/* Başlık + etiketler */
+.overviewMedia:hover img {
+  transform: scale(1.06);
+}
+
+
+.overviewBody {
+  padding-right: 8px;
+}
+
 .overviewTop {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 14px;
+  gap: 16px;
 }
 
 .overviewTitle {
   margin: 0;
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: -0.4px;
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: -1px;
+  color: #111827;
 }
+
 
 .overviewChips {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 .chip {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
-  padding: 7px 11px;
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  letter-spacing: 0.3px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .75);
+  border: 1px solid rgba(17, 24, 39, .12);
+  color: #111827;
+  backdrop-filter: blur(8px);
 }
+
 
 .overviewText {
-  margin: 10px 0 0;
-  line-height: 1.65;
-  font-weight: 600;
+  margin: 14px 0 0;
+  max-width: 70ch;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 650;
+  color: rgba(17, 24, 39, .78);
 }
 
-/* KPI kutuları */
+
 .overviewKpis {
-  margin-top: 14px;
+  margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 14px;
 }
 
 .kpi {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-  padding: 14px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(17, 24, 39, .10);
+  background: rgba(255, 255, 255, .85);
+  padding: 16px 16px;
+  box-shadow: 0 14px 30px rgba(17, 24, 39, .06);
 }
 
 .kpiVal {
-  font-weight: 900;
-  font-size: 17px;
-  letter-spacing: -0.2px;
+  font-weight: 950;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: #111827;
 }
 
 .kpiLbl {
-  margin-top: 4px;
-  font-size: 12px;
-  color: var(--muted);
-  font-weight: 700;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(17, 24, 39, .60);
 }
 
-/* Aksiyon butonları */
+
 .overviewActions {
-  margin-top: 16px;
+  margin-top: 18px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-@media (max-width: 1000px) {
+/* Responsive */
+@media (max-width: 1100px) {
   .overviewGrid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .overviewTitle {
+    font-size: 34px;
   }
 
   .overviewTop {
@@ -202,14 +258,47 @@
   .overviewKpis {
     grid-template-columns: 1fr;
   }
-    @media (max-width: 1000px) {
-      .overview {
-        padding: 18px;
-      }
 
-      .overviewMedia {
-        aspect-ratio: 16 / 10;
-      }
-    }
+  .overviewMedia {
+    aspect-ratio: 16 / 10;
+  }
 }
 
+/* =========================
+   ONLINE KATALOG (BOX)
+   ========================= */
+.catalogCard {
+  max-width: 760px;
+  margin: 18px auto 0;
+  text-align: center;
+  padding: 22px 22px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.catalogCard .btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 900;
+}
+
+/* =========================
+   SECTION BAŞLIKLARI (GLOBAL)
+   ========================= */
+.section h2 {
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  color: #1f2937;
+  margin: 0 0 14px;
+}
+.section>.container>p.muted {
+  text-align: center;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}

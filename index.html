@@ -149,8 +149,8 @@
             <textarea rows="4" placeholder="Kısaca talebinizi yazın..."></textarea>
           </label>
 
-          <button class="btn btn--primary heroFormBtn" type="submit">Gönder (Demo)</button>
-          <p class="tiny muted heroFormNote">Demo: Bu form şu an herhangi bir yere gönderim yapmaz.</p>
+          <button class="btn btn--primary heroFormBtn" type="submit">Gönder</button>
+
         </form>
 
         <div class="heroMiniRow">
@@ -171,7 +171,7 @@
     </div>
   </div>
 
-  <!-- ALT GÖRSEL ŞERİT (opsiyonel ama çok iyi durur) -->
+  <!-- ALT GÖRSEL ŞERİT  -->
   <div class="container heroStrip">
     <a class="heroStripItem gItem" data-full="/images/hero/h01.jpg" aria-label="Görseli büyüt">
       <img src="/images/hero/h01.jpg" alt="Casa Oliva 2 görsel 1" />
@@ -189,15 +189,14 @@
 </section>
 
 
-
-  <!-- GENEL BAKIŞ -->
+<!-- GENEL BAKIŞ  -->
   <section class="section" id="genel-bakis">
-    <div class="container">
-      <div class="overview">
+    <div class="container container--wide">
+      <div class="overview overview--premium">
         <div class="overviewGrid">
           <!-- Görsel -->
           <a class="overviewMedia gItem" data-full="/images/proje/p01.jpg" aria-label="Genel bakış görselini büyüt">
-            <img src="/images/hero/h05.png" alt="Casa Oliva 2 genel bakış görseli" />
+            <img src="public/images/hero/h05.jpg" alt="Casa Oliva 2 genel bakış görseli" />
           </a>
 
           <!-- İçerik -->
@@ -242,13 +241,13 @@
   </section>
 
 
+
   <!-- PROJE ÖZELLİKLERİ -->
   <section class="section" id="proje-ozellikleri">
     <div class="container">
       <h2>Proje Özellikleri</h2>
       <p class="muted">
-        Bu bölümde referanstaki gibi madde madde, ama daha okunabilir modern bir düzen kuracağız.
-        Aşağıdaki maddeler örnek; sen içerikleri gönderince birebir yerleştireceğim.
+
       </p>
 
       <div class="section section--alt" style="padding:18px 0; border-radius:16px;">
@@ -286,9 +285,11 @@
   <!-- KATALOG / BUTON KART -->
   <section class="section" id="katalog">
     <div class="container">
+      <div class="infoCard catalogCard">
+
       <h2>Online Katalog</h2>
       <p class="muted">
-        Online kataloğumuza buradan ulaşabilirsiniz. (Demo buton — gerçek link eklenebilir.)
+        Online kataloğumuza buradan ulaşabilirsiniz.
       </p>
 
       <div class="infoCard" style="grid-template-columns: 1fr; text-align:center;">
@@ -299,11 +300,11 @@
         </div>
 
         <div style="display:flex; justify-content:center; padding-bottom:4px;">
-          <a class="btn btn--primary" href="#" onclick="return false;">3D Online Katalog (Demo)</a>
+          <a class="btn btn--ghost btn--primary btn--lg" href="#" onclick="return false;">3D Online Katalog (Demo)</a>
         </div>
 
         <p class="tiny muted" style="margin:6px 0 0;">
-          Demo: Sunumda buton görünür, bağlantı sonra eklenebilir.
+
         </p>
       </div>
     </div>
@@ -315,8 +316,6 @@
     <div class="container">
       <h2>Vaziyet Planı</h2>
       <p class="muted">
-        Burada tek büyük görsel olacak. Tıklayınca büyük açılır. (Vaziyet planı görselini /assets/plan.jpg
-        yapabilirsin.)
       </p>
 
       <div class="gallery" style="grid-template-columns: 1fr;">
@@ -449,13 +448,11 @@
     <div class="container">
       <h2>Konum</h2>
       <p class="muted">
-        Bu alanı istersen harita / yakınlık maddeleriyle modernleştiririz (merkez, okullar, market, sahil vb.).
+        HARİTA
       </p>
 
       <div class="infoCard" style="grid-template-columns: 1fr;">
         <div class="kv">
-          <span class="k">Yakın Noktalar (Örnek)</span>
-          <span class="v">Şehir merkezi • Okullar • Market • Sahil</span>
         </div>
       </div>
     </div>

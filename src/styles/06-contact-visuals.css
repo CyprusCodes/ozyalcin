@@ -56,30 +56,26 @@
   display: none !important;
 }
 
-/* --- ÇAPRAZ KONUMLANDIRMA --- */
-/* SOL ASIDE: üst kart sola yaslı, alt kart forma yakın */
+
 .contactGrid>.sideVisuals:first-of-type .visualCard:first-child {
   margin-right: 70px;
-  /* formdan uzaklaştır => sola yaklaşır */
   transform: translateX(-8px);
 }
 
 .contactGrid>.sideVisuals:first-of-type .visualCard:last-child {
   margin-left: 78px;
-  /* forma yaklaştır */
   transform: translateX(8px);
 }
 
-/* SAĞ ASIDE: üst kart sağa yaslı, alt kart forma yakın */
+
 .contactGrid>.sideVisuals:last-of-type .visualCard:first-child {
   margin-left: 78px;
-  /* formdan uzaklaştır => sağa yaklaşır */
+
   transform: translateX(8px);
 }
 
 .contactGrid>.sideVisuals:last-of-type .visualCard:last-child {
   margin-right: 52px;
-  /* forma yaklaştır */
   transform: translateX(-8px);
 }
 

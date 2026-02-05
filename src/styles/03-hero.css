@@ -2,7 +2,7 @@
    HERO + FORM (SPLIT)
    ========================= */
 
-/* ÖNEMLİ: heroSplit'e width VERME! */
+
 .heroSplit {
   padding: 38px 0 28px;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
@@ -20,16 +20,13 @@
   background-repeat: no-repeat;
 
   opacity: .16;
-  /* transparanlık */
   filter: blur(0.5px);
-  /* hafif blur */
   transform: scale(1.06);
-  /* blur sonrası kenar boşluğu olmasın */
   pointer-events: none;
   z-index: 0;
 }
 
-/* Foto üstüne soft beyaz katman (okunabilirlik) */
+/* Foto üstüne soft beyaz katman*/
 .heroSplit::after {
   content: "";
   position: absolute;
@@ -45,7 +42,7 @@
   position: relative;
   z-index: 1;
 }
-/* Bu section içindeki container'ı daha geniş yapıyoruz (daha sola/sağa yayılır) */
+
 .heroSplit .container {
   width: min(1400px, 98%);
   margin: 0 auto;
@@ -56,7 +53,6 @@
   display: grid;
   grid-template-columns: minmax(560px, 1fr) minmax(440px, 560px);
   gap: 64px;
-  /* arayı aç */
   align-items: start;
   justify-content: space-between;
 }
@@ -64,9 +60,8 @@
 /* Sol taraf */
 .heroSplit__left {
   padding-top: 18px;
-  /* biraz aşağı al */
   padding-left: 0;
-  /* sola ekstra padding KALDIR */
+
 }
 
 /* Başlık */
@@ -77,9 +72,7 @@
   letter-spacing: -1px;
   font-weight: 900;
 
-  /* Tek satır istersen:
-     - Masaüstünde tek satır
-     - Daralınca otomatik kırılır */
+
   white-space: nowrap;
 }
 
@@ -143,7 +136,6 @@
 .heroFormCard {
   width: 100%;
   max-width: 560px;
-  /* biraz büyüt */
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -231,7 +223,6 @@
 @media (max-width: 1200px) {
   .heroSplit__title {
     white-space: normal;
-    /* daralınca kırıl */
     font-size: 48px;
   }
 
