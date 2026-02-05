@@ -82,7 +82,7 @@
 }
 
 /* =========================================================
-   GENEL BAKIŞ — PREMIUM / WIDE
+   GENEL BAKIŞ
    ========================================================= */
 
 
@@ -276,7 +276,11 @@
   background: #fff;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  border: 2.5px solid rgba(242, 194, 0, .55);
 }
+
 
 .catalogCard .btn {
   padding: 12px 18px;
