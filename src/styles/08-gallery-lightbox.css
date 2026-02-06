@@ -7,51 +7,75 @@
 
 .gItem {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--card);
   padding: 0;
-  border-radius: 16px;
+  border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
   height: 260px;
-  box-shadow: 0 10px 30px rgba(17, 24, 39, .06);
+  box-shadow: var(--shadow);
+  transition: var(--transition-slow);
 }
 
 .gItem img {
-  transition: transform .25s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gItem:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--accent);
 }
 
 .gItem:hover img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .lightbox {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
   display: none;
   align-items: center;
   justify-content: center;
   padding: 22px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.show {
+  opacity: 1;
 }
 
 .lightbox img {
   width: min(1100px, 96%);
   max-height: 82vh;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-slow);
 }
 
 .lightbox__close {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, .2);
-  background: rgba(255, 255, 255, .12);
+  top: 20px;
+  right: 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   color: #fff;
-  padding: 10px 12px;
+  padding: 12px 14px;
   cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
 @media (max-width:900px) {
@@ -61,5 +85,53 @@
 
   .gItem {
     height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .gItem {
+    height: 200px;
+    border-radius: 12px;
+  }
+  
+  .lightbox {
+    padding: 16px;
+  }
+  
+  .lightbox img {
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 12px;
+  }
+  
+  .lightbox__close {
+    top: 12px;
+    right: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    gap: 10px;
+    margin-top: 14px;
+  }
+  
+  .gItem {
+    height: 180px;
+  }
+  
+  .lightbox {
+    padding: 12px;
+  }
+  
+  .lightbox img {
+    max-height: 75vh;
   }
 }

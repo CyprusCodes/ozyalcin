@@ -3,11 +3,10 @@
    ========================= */
 
 .heroSplit {
-  padding: 38px 0 28px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 50px 0 40px;
+  background: var(--gradient-surface);
   position: relative;
   overflow: hidden;
-
 }
 
 /* Arkaplan foto */
@@ -63,21 +62,28 @@
 
 
 .heroSplit__title {
-  margin: 10;
-  font-size: 56px;
-  line-height: 1.03;
-  letter-spacing: -1px;
+  margin: 0;
+  font-size: 58px;
+  line-height: 1.05;
+  letter-spacing: -1.2px;
   font-weight: 900;
   white-space: nowrap;
+  color: var(--text);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, var(--text) 0%, var(--text-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .heroSplit__lead {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-weight: 800;
-  letter-spacing: 0.6px;
+  margin: 16px 0 0;
+  color: var(--accent-dark);
+  font-weight: 700;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -90,72 +96,94 @@
 /* Form kartı */
 .heroFormCard {
   width: min(720px, 100%);
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: 0 18px 50px rgba(17, 24, 39, .10);
-  padding: 22px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2xl);
+  padding: 36px 32px;
   text-align: left;
-    margin-left: auto;
-      margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(20px);
+  transition: var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+}
 
+.heroFormCard:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .heroFormTop {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .heroFormTitle {
   margin: 0;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 900;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .heroFormSubtitle {
-  margin: 8px 0 0;
-  font-size: 13px;
-  line-height: 1.5;
-
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-light);
+  font-weight: 500;
 }
 
 /* 3'lü bilgi */
 .heroSplit__info {
   width: min(980px, 100%);
-  margin-top: 8px;
+  margin-top: 12px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: var(--shadow);
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-lg);
   text-align: center;
   margin-left: auto;
-    margin-right: auto;
-    justify-items: center;
+  margin-right: auto;
+  justify-items: center;
+  backdrop-filter: blur(10px);
 }
 
 .heroInfoItem {
-  padding: 10px 10px;
-  border-radius: 14px;
-  background: #fff;
+  padding: 14px 12px;
+  border-radius: var(--radius-sm);
+  background: transparent;
   width: 100%;
-    text-align: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.heroInfoItem:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
 }
 
 .heroInfoK {
   display: block;
   font-weight: 900;
-  font-size: 16px;
-  color: #111;
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 .heroInfoV {
   display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-weight: 800;
+  margin-top: 4px;
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
 }
 
 /* Aksiyon butonları */
@@ -266,6 +294,31 @@
 @media (max-width: 560px) {
   .heroStrip {
     grid-template-columns: 1fr;
+  }
+  
+  .heroSplit__title {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+  
+  .heroFormCard {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+  
+  .heroStripItem {
+    height: 220px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroSplit__title {
+    font-size: 28px;
+    white-space: normal;
+  }
+  
+  .heroFormCard {
+    padding: 16px 14px;
   }
 }
 /* ortalama */

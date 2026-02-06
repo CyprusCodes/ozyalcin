@@ -1,6 +1,38 @@
 import "./style.css";
 
 /* =========================
+   Performance & SEO optimizations
+   ========================= */
+
+// Lazy loading for images (SEO & Performance)
+if ('IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+}
+
+// Critical performance metrics for Core Web Vitals
+const observer = new PerformanceObserver((list) => {
+  for (const entry of list.getEntries()) {
+    if (entry.entryType === 'largest-contentful-paint') {
+      console.log('LCP candidate:', entry.startTime);
+    }
+  }
+});
+observer.observe({type: 'largest-contentful-paint', buffered: true});
+
+/* =========================
    Mobile menu (simple toggle)
    ========================= */
 const menuBtn = document.getElementById("menuBtn");
@@ -13,7 +45,11 @@ menuBtn?.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
   if (!nav || !menuBtn) return;
   const t = e.target;
-  if (nav.classList.contains("is-open") && !nav.contains(t) && !menuBtn.contains(t)) {
+  if (
+    nav.classList.contains("is-open") &&
+    !nav.contains(t) &&
+    !menuBtn.contains(t)
+  ) {
     nav.classList.remove("is-open");
   }
 });
@@ -21,7 +57,6 @@ document.addEventListener("click", (e) => {
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") nav?.classList.remove("is-open");
 });
-
 
 /* =========================
    Demo form (prevent submit)
@@ -87,8 +122,7 @@ function getSliderMoveBy(sliderEl) {
   const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
 
   const visibleCount =
-    window.innerWidth > 1100 ? 5 :
-    window.innerWidth > 700 ? 3 : 1;
+    window.innerWidth > 1100 ? 5 : window.innerWidth > 700 ? 3 : 1;
 
   const cardW = first.getBoundingClientRect().width;
   return (cardW + gap) * visibleCount;
