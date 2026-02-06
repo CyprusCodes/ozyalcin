@@ -78,7 +78,7 @@
   transform: scale(1.05);
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .gallery {
     grid-template-columns: 1fr;
   }
@@ -93,22 +93,22 @@
     gap: 12px;
     margin-top: 16px;
   }
-  
+
   .gItem {
     height: 200px;
     border-radius: 12px;
   }
-  
+
   .lightbox {
     padding: 16px;
   }
-  
+
   .lightbox img {
     width: 100%;
     max-height: 80vh;
     border-radius: 12px;
   }
-  
+
   .lightbox__close {
     top: 12px;
     right: 12px;
@@ -122,15 +122,15 @@
     gap: 10px;
     margin-top: 14px;
   }
-  
+
   .gItem {
     height: 180px;
   }
-  
+
   .lightbox {
     padding: 12px;
   }
-  
+
   .lightbox img {
     max-height: 75vh;
   }

@@ -18,7 +18,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: .16;
+  opacity: 0.16;
   filter: blur(0.5px);
   transform: scale(1.06);
   pointer-events: none;
@@ -33,7 +33,6 @@
   pointer-events: none;
   z-index: 0;
 }
-
 
 .heroSplit__inner,
 .heroStrip {
@@ -60,7 +59,6 @@
   width: min(980px, 100%);
 }
 
-
 .heroSplit__title {
   margin: 0;
   font-size: 58px;
@@ -85,7 +83,6 @@
   font-size: 14px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-
 
 .heroSplit__formWrap {
   width: 100%;
@@ -193,15 +190,14 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-
 }
 
 .heroSplit__actions--center {
   justify-content: center;
-    justify-content: center;
-      width: min(980px, 100%);
-      margin-left: auto;
-      margin-right: auto;
+  justify-content: center;
+  width: min(980px, 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Mini kutular (form içinde) */
@@ -295,17 +291,17 @@
   .heroStrip {
     grid-template-columns: 1fr;
   }
-  
+
   .heroSplit__title {
     font-size: 32px;
     line-height: 1.1;
   }
-  
+
   .heroFormCard {
     padding: 18px 16px;
     border-radius: 16px;
   }
-  
+
   .heroStripItem {
     height: 220px;
   }
@@ -316,7 +312,7 @@
     font-size: 28px;
     white-space: normal;
   }
-  
+
   .heroFormCard {
     padding: 16px 14px;
   }
