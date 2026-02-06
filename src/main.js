@@ -7,17 +7,21 @@ const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
 menuBtn?.addEventListener("click", () => {
-  const isOpen = nav.style.display === "flex";
-  nav.style.display = isOpen ? "none" : "flex";
-  nav.style.flexDirection = "column";
-  nav.style.position = "absolute";
-  nav.style.right = "4%";
-  nav.style.top = "58px";
-  nav.style.padding = "12px";
-  nav.style.background = "rgba(11,11,12,.95)";
-  nav.style.border = "1px solid rgba(255,255,255,.10)";
-  nav.style.borderRadius = "14px";
+  nav?.classList.toggle("is-open");
 });
+
+document.addEventListener("click", (e) => {
+  if (!nav || !menuBtn) return;
+  const t = e.target;
+  if (nav.classList.contains("is-open") && !nav.contains(t) && !menuBtn.contains(t)) {
+    nav.classList.remove("is-open");
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") nav?.classList.remove("is-open");
+});
+
 
 /* =========================
    Demo form (prevent submit)

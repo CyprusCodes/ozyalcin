@@ -80,7 +80,7 @@
   font-size: 13px;
 }
 
-/* Form sarmalayıcı */
+
 .heroSplit__formWrap {
   width: 100%;
   display: flex;
@@ -89,7 +89,7 @@
 
 /* Form kartı */
 .heroFormCard {
-  width: min(720px, 100%); /* ortalı ve büyükçe */
+  width: min(720px, 100%);
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -208,7 +208,7 @@
 /* Alt görsel şerit */
 .heroStrip {
   padding-top: 6px;
-  margin-top: 32px; /* formdan biraz aşağıda başlasın */
+  margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
