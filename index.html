@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Primary Meta Tags -->
   <title>Casa Oliva 2 by Özyalçın — Proje Detayı</title>
   <meta name="title" content="Casa Oliva 2 by Özyalçın — Proje Detayı" />
@@ -13,12 +13,12 @@
   <meta name="author" content="Özyalçın Group" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ozyalcin.com/casa-oliva-2" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/public/images/brand/casa-oliva-logo.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/public/images/brand/casa-oliva-logo.png" />
   <link rel="apple-touch-icon" href="/public/images/brand/casa-oliva-logo.png" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ozyalcin.com/casa-oliva-2" />
@@ -29,14 +29,14 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="tr_TR" />
   <meta property="og:site_name" content="Özyalçın Group" />
-  
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://ozyalcin.com/casa-oliva-2" />
   <meta property="twitter:title" content="Casa Oliva 2 by Özyalçın — Proje Detayı" />
   <meta property="twitter:description" content="Girne Zeytinlik bölgesinde konumlanmış Casa Oliva 2 projesi. Doğanın içinde şehrin yanı başında lüks yaşam alanları." />
   <meta property="twitter:image" content="https://ozyalcin.com/public/images/hero/h01.jpg" />
-  
+
   <!-- Additional SEO Meta Tags -->
   <meta name="theme-color" content="#f2c200" />
   <meta name="format-detection" content="telephone=yes" />
@@ -44,7 +44,7 @@
   <meta name="geo.placename" content="Girne, Kuzey Kıbrıs" />
   <meta name="DC.language" content="tr" />
   <meta name="DC.title" content="Casa Oliva 2 by Özyalçın — Proje Detayı" />
-  
+
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -89,14 +89,14 @@
     }
   }
   </script>
-  
+
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  
+
   <!-- Preload critical resources -->
   <link rel="preload" href="/src/styles/00-variables.css" as="style" />
   <link rel="preload" href="/src/styles/01-base.css" as="style" />
-  
+
   <link rel="stylesheet" href="/src/style.css" />
 
 </head>
@@ -179,8 +179,6 @@
 <!-- Sarı şerit -->
 <div class="accentBar"></div>
 
-
-
 <!-- HERO + FORM  -->
 <section class="heroSplit" id="top">
   <div class="container heroSplit__inner">
@@ -217,29 +215,53 @@
         </div>
 
         <form class="form heroForm" id="demoForm">
-          <label>
-            Ad Soyad
-            <input type="text" placeholder="Adınız ve soyadınız" />
+          <!-- İsim Soyisim -->
+          <label for="fullName">
+            İsim &amp; Soyisim
+            <input id="fullName" name="fullName" type="text" placeholder="Adınız ve soyadınız" autocomplete="name" required />
           </label>
 
-          <label>
-            Telefon
-            <input type="tel" placeholder="(05xx) xxx xx xx" />
+          <!-- Telefon -->
+          <label for="phone">
+            Telefon Numarası
+            <input id="phone" name="phone" type="tel" placeholder="+90 (5xx) xxx xx xx" autocomplete="tel" inputmode="tel"
+              required />
           </label>
 
-          <label>
-            E-posta
-            <input type="email" placeholder="ornek@mail.com" />
-          </label>
+          <!-- Bütçe -->
+          <fieldset class="formGroup" aria-describedby="budgetHelp">
+            <legend>Villa alımı için planladığınız bütçe aralığı nedir?</legend>
 
-          <label>
-            Mesaj
-            <textarea rows="4" placeholder="Kısaca talebinizi yazın..."></textarea>
+            <div class="radioGrid">
+              <label class="radioPill">
+                <input type="radio" name="budget" value="£400.000 – £500.000" required />
+                <span>£400.000 – £500.000</span>
+              </label>
+
+              <label class="radioPill">
+                <input type="radio" name="budget" value="£600.000 – £700.000" />
+                <span>£600.000 – £700.000</span>
+              </label>
+
+              <label class="radioPill">
+                <input type="radio" name="budget" value="£700.000 – £800.000" />
+                <span>£700.000 – £800.000</span>
+              </label>
+            </div>
+
+            <p id="budgetHelp" class="tiny muted" style="margin:6px 0 0;">Lütfen bir aralık seçin.</p>
+          </fieldset>
+
+          <!-- Ne zaman iletişime geçelim -->
+          <label for="contactTime">
+            Sizinle ne zaman iletişime geçmemizi istersiniz?
+            <textarea id="contactTime" name="contactTime" rows="3"
+              placeholder="Lütfen uygun olduğunuz gün ve saat aralığını belirtin."></textarea>
           </label>
 
           <button class="btn btn--primary heroFormBtn" type="submit">Gönder</button>
-
         </form>
+
 
         <div class="heroMiniRow">
           <div class="heroMini">
