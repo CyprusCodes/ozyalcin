@@ -150,3 +150,14 @@
     gap: 18px;
   }
 }
+/* Footer logo alanı */
+.footerBrand {
+  margin-top: 32px;
+}
+
+.footerBrand img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.9;
+}

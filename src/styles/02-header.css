@@ -29,7 +29,7 @@
 }
 
 .brandLogo {
-  height: 100px;
+  height: 65px;
   width: auto;
   display: block;
 }
@@ -227,7 +227,7 @@
 /* Sarı şerit */
 .accentBar {
   height: 14px;
-  background: var(--accent);
+  background: #EAB900;
 }
 
 /* ===================== MOBILE ===================== */

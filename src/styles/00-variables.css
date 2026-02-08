@@ -17,10 +17,10 @@
   --card-hover: #fafafa;
 
   /* Brand colors */
-  --accent: #f59e0b;
+  --accent:#EAB900;
   --accent-hover: #d97706;
   --accent-light: rgba(245, 158, 11, 0.1);
-  --accent-dark: #b45309;
+  --accent-dark: #A65A00;
 
   /* Status colors */
   --success: #10b981;

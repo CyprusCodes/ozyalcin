@@ -90,6 +90,33 @@
   justify-content: center;
 }
 
+
+.heroSplit__title--logo {
+  margin: 0;
+  line-height: 0;
+  height: 120px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Logo */
+.heroTitleLogo {
+  display: block;
+  height: 400px;
+  width: min(650px, 85vw);
+  max-width: min(720px, 92vw);
+  object-fit: contain;
+
+  transform: translateY(-150px);
+
+}
+@media (max-width: 560px) {
+  .heroTitleLogo {
+    height: 56px;
+  }
+}
+
 /* Form kartı */
 .heroFormCard {
   width: min(720px, 100%);
@@ -135,23 +162,23 @@
 
 /* 3'lü bilgi */
 .heroSplit__info {
-  width: min(980px, 100%);
-  margin-top: 12px;
+  width: min(1100px, 100%);
+  max-width: 1100px;
+  margin: 14px auto 0;
+  box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 18px 22px;
+  justify-items: center;
   border: 1px solid var(--line-light);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow-lg);
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  justify-items: center;
+  place-items: center;
   backdrop-filter: blur(10px);
 }
-
 .heroInfoItem {
   padding: 14px 12px;
   border-radius: var(--radius-sm);
@@ -206,6 +233,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  text-align: center;
 }
 
 .heroMini {

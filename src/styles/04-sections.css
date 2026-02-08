@@ -3,7 +3,7 @@
 }
 
 #genel-bakis {
-  padding: 180px 0;
+  padding: 150px 0;
   background: var(--gradient-surface);
   position: relative;
 }
@@ -88,7 +88,49 @@
   transform: scale(1.1);
   box-shadow: var(--shadow-xl);
 }
+/* ===== PROJE ÖZELLİKLERİ – ÖNE ÇIKAN ===== */
 
+.bullets--featured {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bullets--featured li {
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* CTA alanı */
+.features-cta {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.features-cta__text {
+  max-width: 640px;
+  margin: 0 auto 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+/* ===== PROJE ÖZELLİKLERİ BOX ===== */
+
+.features-box {
+  max-width: 980px;
+  margin: 0 auto 40px;
+  padding: 36px 42px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(17, 24, 39, 0.08);
+}
+
+@media (max-width: 768px) {
+  .features-box {
+    padding: 24px 20px;
+  }
+}
 /* VAZİYET PLANI */
 #vaziyet-plani {
   padding: 100px 0;
