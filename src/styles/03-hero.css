@@ -350,3 +350,23 @@
   justify-content: center;
   width: 100%;
 }
+/* === FIX: Mobilde logo görünmüyor (translateY yüzünden yukarı kaçıyor) === */
+@media (max-width: 560px) {
+  .heroSplit__title--logo {
+    height: auto;
+    /* 120px sabit yükseklik yüzünden kırpılmasın */
+    line-height: normal;
+    /* line-height:0 yüzünden layout sıkışmasın */
+    align-items: center;
+    /* hizalama */
+  }
+
+  .heroTitleLogo {
+    height: 200px;
+    /* 56 çok küçük + logo okunmuyor */
+    transform: none;
+    /* EN KRİTİK: -150px yukarı kaçmasın */
+    margin-top: 10px;
+    /* üstte biraz nefes */
+  }
+}
