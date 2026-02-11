@@ -127,9 +127,5 @@
   color: #374151;
   font-weight: 800;
 }
-.radioGrid .radioPill:last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(250px, 100%);
-}
+
 
