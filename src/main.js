@@ -60,11 +60,12 @@ window.addEventListener("keydown", (e) => {
 
 /* =========================
    Demo form (prevent submit)
-   ========================= */
+   =========================
 document.getElementById("demoForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   alert("Demo: Form gönderimi kapalı.");
 });
+*/
 
 /* =========================
    Lightbox (reusable)
