@@ -67,6 +67,7 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+
     const script_url = "https://script.google.com/macros/s/AKfycbwt-AdMn26VT-dCN17Me6ywvH201HhQHS5A-JVQoE5iZetiTvjtqtJkJoqyQ7fArAJi/exec";
 
     const btn = form.querySelector('button[type="submit"]');
@@ -87,17 +88,16 @@ if (form) {
 
       const data = await res.json();
 
-      if (data && data.result === "success") {
-        const toast = document.getElementById("formToast");
-if (toast) {
-  toast.classList.add("show");
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 3000);
-}
-form.reset();
+if (data && data.result === "success") {
 
-        form.reset();
+  const successMessage = document.getElementById("formSuccess");
+
+  if (successMessage) {
+    successMessage.style.display = "block";
+  }
+
+  form.reset();
+
       } else {
         alert("Bir hata oluştu. Lütfen tekrar deneyin.");
         console.warn("Apps script response:", data);

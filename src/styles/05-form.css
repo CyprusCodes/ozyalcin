@@ -160,3 +160,22 @@
   font-size: 12px;
   font-weight: 700;
 }
+.heroFormBtn:disabled {
+    background: var(--accent-hover);
+      pointer-events: none;
+      opacity: 1;
+      cursor: not-allowed;
+}
+.formSuccessMessage {
+  display: none;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #e6f7ec;
+  color: #1f7a4c;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #b7e4c7;
+    display: none;
+}
