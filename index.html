@@ -215,24 +215,34 @@
           </p>
         </div>
 
-        <form class="form heroForm" id="demoForm" method="GET" action="https://script.google.com/macros/s/AKfycbwt-AdMn26VT-dCN17Me6ywvH201HhQHS5A-JVQoE5iZetiTvjtqtJkJoqyQ7fArAJi/exec">
+      <form class="form heroForm" id="demoForm">
 
           <!-- İsim Soyisim -->
           <label for="fullName">
-            İsim &amp; Soyisim
+             <span class="labelText">
+            İsim &amp; Soyisim <span class="required">*</span>
+            </span>
             <input id="fullName" name="fullName" type="text" placeholder="Adınız ve soyadınız" autocomplete="name" required />
           </label>
 
           <!-- Telefon -->
           <label for="phone">
-            Telefon Numarası
+            <span class="labelText">
+              Telefon Numarası <span class="required">*</span>
+            </span>
             <input id="phone" name="phone" type="tel" placeholder="+90 (5xx) xxx xx xx" autocomplete="tel" inputmode="tel"
               required />
           </label>
 
           <!-- Bütçe -->
           <fieldset class="formGroup" aria-describedby="budgetHelp">
-            <legend>Villa alımı için planladığınız bütçe aralığı nedir?</legend>
+
+              <legend>
+                <span class="labelText">
+                  Villa alımı için planladığınız bütçe aralığı nedir?
+                  <span class="required">*</span>
+                </span>
+              </legend>
 
             <div class="radioGrid">
               <label class="radioPill">
@@ -258,12 +268,15 @@
 
           </fieldset>
 
-          <!-- Ne zaman iletişime geçelim -->
-          <label for="contactTime">
-            Sizinle ne zaman iletişime geçmemizi istersiniz?
-            <textarea id="contactTime" name="contactTime" rows="3"
-              placeholder="Lütfen uygun olduğunuz gün ve saat aralığını belirtin."></textarea>
-          </label>
+        <!-- Ne zaman iletişime geçelim -->
+        <label for="contactTime">
+          <span class="labelText">
+            Sizinle ne zaman iletişime geçmemizi istersiniz? <span class="required">*</span>
+          </span>
+
+          <textarea id="contactTime" name="contactTime" rows="3"
+            placeholder="Lütfen uygun olduğunuz gün ve saat aralığını belirtin." required></textarea>
+        </label>
 
           <button class="btn btn--primary heroFormBtn" type="submit">Gönder</button>
         </form>
@@ -285,6 +298,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- ALT GÖRSEL ŞERİT  -->
   <div class="container heroStrip">
@@ -643,6 +657,10 @@
   </div>
 
   <script type="module" src="src/main.js"></script>
+  <div id="formToast" class="formToast">
+    Form başarıyla gönderildi.
+  </div>
+
 </body>
 
 </html>

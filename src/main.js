@@ -59,13 +59,61 @@ window.addEventListener("keydown", (e) => {
 });
 
 /* =========================
-   Demo form (prevent submit)
-   =========================
-document.getElementById("demoForm")?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Demo: Form gönderimi kapalı.");
-});
-*/
+   form submit -> google sheets
+   ========================= */
+const form = document.getElementById("demoForm");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const script_url = "https://script.google.com/macros/s/AKfycbwt-AdMn26VT-dCN17Me6ywvH201HhQHS5A-JVQoE5iZetiTvjtqtJkJoqyQ7fArAJi/exec";
+
+    const btn = form.querySelector('button[type="submit"]');
+    const original_btn_text = btn ? btn.textContent : "";
+
+    try {
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = "Gönderiliyor...";
+      }
+
+      const form_data = new FormData(form);
+
+      const res = await fetch(script_url, {
+        method: "post",
+        body: form_data,
+      });
+
+      const data = await res.json();
+
+      if (data && data.result === "success") {
+        const toast = document.getElementById("formToast");
+if (toast) {
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+form.reset();
+
+        form.reset();
+      } else {
+        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+        console.warn("Apps script response:", data);
+      }
+    } catch (err) {
+      alert("Bağlantı hatası oluştu. Lütfen tekrar deneyin.");
+      console.error(err);
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = original_btn_text;
+      }
+    }
+  });
+}
+
 
 /* =========================
    Lightbox (reusable)

@@ -128,4 +128,35 @@
   font-weight: 800;
 }
 
+.formToast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background: #1f7a4c;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+}
 
+.formToast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.labelText {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.required {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 700;
+}
