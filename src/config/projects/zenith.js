@@ -1,4 +1,5 @@
-const base = "/images/projects/zenith";
+const base = `${import.meta.env.BASE_URL}images/projects/zenith`;
+
 const makeList = (prefix, count, ext, folder) =>
   Array.from({ length: count }, (_, i) =>
     `${base}/${folder}/${prefix}${String(i + 1).padStart(2, "0")}.${ext}`
@@ -61,7 +62,7 @@ export const zenith = {
   },
 
     catalog: {
-    pdfUrl:"/catalogs/zenith.pdf",
+    pdfUrl:`${import.meta.env.BASE_URL}catalogs/zenith.pdf`,
   },
 
   features: {

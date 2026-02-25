@@ -1,3 +1,4 @@
+const base = `${import.meta.env.BASE_URL}images/projects/casa-oliva-2`;
 export const casaOliva2 = {
   key: "casa-oliva-2",
   mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.796776575385!2d33.29164990425093!3d35.33586770268108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de13e57ed0cadf%3A0xb071ce70639505ee!2zQ2FzYSBPbGl2YSBieSDDlnp5YWzDp8Sxbg!5e0!3m2!1str!2str!4v1771844312405!5m2!1str!2str",
@@ -10,7 +11,7 @@ export const casaOliva2 = {
   },
 
   header: {
-    brandLogo: "/images/projects/casa-oliva-2/brand/ozyalcinlogo.jpg",
+    brandLogo: `${base}/brand/ozyalcinlogo.jpg`,
     phone1: "+90 (392) 650 2900",
     phone1Href: "tel:+903926502900",
     phone2: "+90 (548) 850 2900",
@@ -18,19 +19,19 @@ export const casaOliva2 = {
   },
 
   hero: {
-    projectLogo: "/images/projects/casa-oliva-2/brand/casa-oliva-logo.png",
+    projectLogo: `${base}/brand/casa-oliva-logo.png`,
     lead: "DOĞA İLE DOST, DOĞA İLE UYUMLU BİR YAŞAM.",
     info: [
       { k: "Şehir", v: "Girne" },
       { k: "Tapu", v: "Türk Tapulu" },
       { k: "Bölge", v: "Zeytinlik" },
     ],
-    bgImage: "/images/projects/casa-oliva-2/proje/p02.jpg",
+    bgImage: `${base}/proje/p02.jpg`,
     strip: [
-      "/images/projects/casa-oliva-2/hero/h01.jpg",
-      "/images/projects/casa-oliva-2/hero/h02.jpg",
-      "/images/projects/casa-oliva-2/hero/h03.jpg",
-      "/images/projects/casa-oliva-2/hero/h04.jpg",
+      `${base}/hero/h01.jpg`,
+      `${base}/hero/h02.jpg`,
+      `${base}/hero/h03.jpg`,
+      `${base}/hero/h04.jpg`,
     ],
      miniCards: [
       { title: "Hızlı dönüş", text: "Genelde aynı gün dönüş." },
@@ -44,7 +45,7 @@ export const casaOliva2 = {
 },
 
   overview: {
-    image: "/images/projects/casa-oliva-2/plan/genelbakis.jpg",
+    image: `${base}/plan/genelbakis.jpg`,
     title: "Genel Bakış",
     chips: ["Girne / Zeytinlik", "Türk Tapulu", "Butik Proje"],
     text:
@@ -57,7 +58,7 @@ export const casaOliva2 = {
   },
 
   catalog: {
-    pdfUrl:"/catalogs/casa-oliva-2.pdf",
+    pdfUrl:`${import.meta.env.BASE_URL}catalogs/casa-oliva-2.pdf`,
   },
 
   features: {
@@ -74,25 +75,25 @@ export const casaOliva2 = {
 
   plans: {
     title: "Vaziyet Planı",
-    image: "/images/projects/casa-oliva-2/plan/plan.jpg",
+    image: `${base}/plan/plan.jpg`,
     // opsiyonel: floorPlans: [{ title, image }]
   },
 
   sliders: {
     dis: {
       title: "Proje Fotoğrafları",
-      images: Array.from({ length: 16 }, (_, i) => `/images/projects/casa-oliva-2/proje/p${String(i + 1).padStart(2, "0")}.jpg`),
+      images: Array.from({ length: 16 }, (_, i) => `${base}/proje/p${String(i + 1).padStart(2, "0")}.jpg`),
     },
     a: {
       title: "A Tipi İç Mimari",
-      images: Array.from({ length: 21 }, (_, i) => `/images/projects/casa-oliva-2/a-tipi/a${String(i + 1).padStart(2, "0")}.jpg`),
+      images: Array.from({ length: 21 }, (_, i) => `${base}/a-tipi/a${String(i + 1).padStart(2, "0")}.jpg`),
     },
     c: {
       title: "C Tipi İç Mimari",
-      images: Array.from({ length: 21 }, (_, i) => `/images/projects/casa-oliva-2/c-tipi/c${String(i + 1).padStart(2, "0")}.jpg`),
+      images: Array.from({ length: 21 }, (_, i) => `${base}/c-tipi/c${String(i + 1).padStart(2, "0")}.jpg`),
     },
   },
   footer: {
-    footerBrandlogo: "/images/projects/casa-oliva-2/brand/ozyalcinlogo.jpg",
+    footerBrandlogo: `${base}/brand/ozyalcinlogo.jpg`,
   }
 };

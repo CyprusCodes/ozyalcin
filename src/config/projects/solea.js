@@ -1,4 +1,4 @@
-const base = "/images/projects/solea";
+const base = `${import.meta.env.BASE_URL}images/projects/solea`;
 const makeList = (prefix, count, ext, folder) =>
   Array.from({ length: count }, (_, i) =>
     `${base}/${folder}/${prefix}${String(i + 1).padStart(2, "0")}.${ext}`
@@ -61,7 +61,7 @@ export const solea = {
 },
 
   catalog: {
-    pdfUrl:"/catalogs/solea.pdf",
+    pdfUrl:`${import.meta.env.BASE_URL}catalogs/solea.pdf`,
   },
 
   features: {
