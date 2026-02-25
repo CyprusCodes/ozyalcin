@@ -71,7 +71,7 @@
   font-weight: 800;
 }
 
-/* Bütçe seçenekleri */
+/* BUDGET OPTIONS */
 .radioGrid {
   display: grid;
   grid-template-columns: 1fr;

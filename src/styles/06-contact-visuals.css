@@ -50,7 +50,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .18) 100%);
 }
 
-/* FOTO ÜSTÜ YAZILAR KAPALI */
+
 .visualBadge {
   display: none !important;
 }
@@ -124,7 +124,7 @@
     height: 190px;
   }
 
-  /* mobil/tablet: çapraz marginleri kapat */
+  /* mobil/tablet*/
   .contactGrid>.sideVisuals:first-of-type .visualCard:first-child,
   .contactGrid>.sideVisuals:first-of-type .visualCard:last-child,
   .contactGrid>.sideVisuals:last-of-type .visualCard:first-child,

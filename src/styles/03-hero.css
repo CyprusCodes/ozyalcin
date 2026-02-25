@@ -3,18 +3,18 @@
    ========================= */
 
 .heroSplit {
-  padding: 50px 0 40px;
+  padding: 20px 0 40px;
   background: var(--gradient-surface);
   position: relative;
   overflow: hidden;
 }
 
-/* Arkaplan foto */
+/* background photo */
 .heroSplit::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/hero/h05.jpg");
+  background-image: var(--hero-bg, url("/images/hero/h05.jpg"));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +25,17 @@
   z-index: 0;
 }
 
-/* Foto üstüne soft beyaz katman*/
+.heroSplit__left {
+  width: 100%;
+  max-width: 700px;
+  /* hero info box limit */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* keep centered */
+}
+
+
 .heroSplit::after {
   content: "";
   position: absolute;
@@ -45,7 +55,7 @@
   margin: 0 auto;
 }
 
-/* Stack düzen */
+/* Stack  */
 .heroSplit__inner {
   display: flex;
   flex-direction: column;
@@ -54,7 +64,7 @@
   gap: 18px;
 }
 
-/* Başlık alanı */
+/* header */
 .heroSplit__head {
   width: min(980px, 100%);
 }
@@ -75,7 +85,7 @@
 }
 
 .heroSplit__lead {
-  margin: 16px 0 0;
+  margin: 5px 0 0;
   color: var(--accent-dark);
   font-weight: 700;
   letter-spacing: 1.2px;
@@ -92,32 +102,31 @@
 
 
 .heroSplit__title--logo {
-  margin: 0;
-  line-height: 0;
-  height: 120px;
+  position: relative;
+  width: 100%;
+  height: 220px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
+  line-height: 0;
 }
 
-/* Logo */
 .heroTitleLogo {
   display: block;
-  height: 400px;
+  height: 500px;
   width: min(650px, 85vw);
   max-width: min(720px, 92vw);
   object-fit: contain;
-
   transform: translateY(-150px);
-
 }
+
 @media (max-width: 560px) {
-  .heroTitleLogo {
-    height: 56px;
+  .heroSplit__title--logo {
+    height: 180px;
   }
-}
 
-/* Form kartı */
+}
+/* Form card*/
 .heroFormCard {
   width: min(720px, 100%);
   background: rgba(255, 255, 255, 0.95);
@@ -366,4 +375,38 @@
     margin-top: 10px;
 
   }
+}
+
+/* =========================
+   PER-PROJECT HERO OVERRIDES
+   ========================= */
+
+/* CASA */
+body.p-casa .heroTitleLogo {
+  height: 400px;
+  transform: translateY(-40px);
+}
+
+body.p-casa .heroSplit__lead {
+  margin-top: 10px;
+}
+
+/* ZENITH */
+body.p-zenith .heroTitleLogo {
+  height: 350px;
+  transform: translateY(-90px);
+}
+
+body.p-zenith .heroSplit__lead {
+  margin-top: 0px;
+}
+
+/* SOLEA */
+body.p-solea .heroTitleLogo {
+  height: 300px;
+  transform: translateY(-15px);
+}
+
+body.p-solea .heroSplit__lead {
+  margin-top: 80px;
 }

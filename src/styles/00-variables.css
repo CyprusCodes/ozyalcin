@@ -55,4 +55,5 @@
   );
   --gradient-surface: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   --gradient-alt: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+
 }

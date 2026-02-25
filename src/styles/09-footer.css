@@ -130,9 +130,10 @@
 }
 
 .footerCopy {
+  text-align: center;
   font-size: 12px;
   line-height: 1.5;
-  margin-top: 6px;
+  margin-top: 15px;
 }
 
 @media (max-width:900px) {
