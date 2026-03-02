@@ -62,7 +62,7 @@ export const zenith = {
     kpis: [
       { val: " 19.095", lbl: "Proje alanı (m²)" },
       { val: "18 Villa", lbl: "A / B Tipi" },
-      { val: "9+2/5+1", lbl: "2 ve 3 katlı plan" },
+      { val: "5+1/9+2", lbl: "2 ve 3 katlı plan" },
     ],
   },
 

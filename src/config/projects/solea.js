@@ -52,7 +52,7 @@ export const solea = {
     kpis: [
       { val: "4.000 m²", lbl: "Proje alanı" },
       { val: "10 Villa", lbl: "A / B / C Tipi" },
-      { val: "6+1/4+1", lbl: "2 ve 3 katlı plan" },
+      { val: "4+1/6+1", lbl: "2 ve 3 katlı plan" },
     ],
   },
 
