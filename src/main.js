@@ -46,7 +46,7 @@ function setDataFull(id, value) {
 
 
    function applyProjectConfig(p) {
-
+ //project by project budget options
     function applyBudgetOptions(project) {
   const wrap = document.getElementById("budgetOptions");
   if (!wrap) return;
@@ -73,7 +73,7 @@ function setDataFull(id, value) {
     )
     .join("");
 }
-
+ //active project budgets
 applyBudgetOptions(activeProject);
     // Meta (Tab title + description)
   if (p.meta?.title) {
