@@ -46,7 +46,12 @@ export const zenith = {
   },
 
   form: {
-  scriptUrl: "https://script.google.com/macros/s/AKfycbwH2geqPRgkZtVI5cmnDKWhjy8JJBDzFSdTHSB9pUzJLFWnh-CxYNpsg-6es5F9O4MQdA/exec"
+  scriptUrl: "https://script.google.com/macros/s/AKfycbwH2geqPRgkZtVI5cmnDKWhjy8JJBDzFSdTHSB9pUzJLFWnh-CxYNpsg-6es5F9O4MQdA/exec",
+  budgetOptions: [
+    "£1.000.000 - £1.500.000",
+    "£1.750.000 - £2.000.000",
+    "£2.000.000 ve üzeri",
+  ],
 },
 
   overview: {
