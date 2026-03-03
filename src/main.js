@@ -398,11 +398,21 @@ if (data && data.result === "success") {
 /* =========================
    Catalog modal (PDF.js)
    ========================= */
+// Lazy-load PDF.js only when catalog is opened
+let pdfjsLib = null;
+let pdfWorkerUrl = null;
 
-import * as pdfjsLib from "pdfjs-dist";
-import pdfWorker from "pdfjs-dist/build/pdf.worker?url";
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
+async function ensurePdfJs() {
+  if (pdfjsLib && pdfWorkerUrl) return;
 
+  const lib = await import("pdfjs-dist");
+  const worker = await import("pdfjs-dist/build/pdf.worker?url");
+
+  pdfjsLib = lib;
+  pdfWorkerUrl = worker.default;
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+}
 const openCatalogBtn = document.getElementById("openCatalogBtn");
 const catalogModal = document.getElementById("catalogModal");
 const catalogClose = document.getElementById("catalogClose");
@@ -466,6 +476,8 @@ async function openCatalog(pdfUrl) {
   }
 
   showCatalogModal();
+
+  await ensurePdfJs();
 
   pdfDoc = await pdfjsLib.getDocument(pdfUrl).promise;
   pageNum = 1;
