@@ -41,7 +41,7 @@ export const casaOliva2 = {
   },
 
   form: {
-  scriptUrl: "https://script.google.com/macros/s/AKfycbzD-_tq4yCCu_o9JnYtgCCfRDCPzyAzF4NZx6WNOuBSuRlBUrk1G2TfmwQGyH3lfz_Z/exec"
+  scriptUrl: "https://script.google.com/macros/s/AKfycbzS-pzigyH8YCXtKja6xdljaY0h583CxRKSnN4dXf56C_zaRSmACOVOWs8fnbBUbCtf/exec"
 },
 
   overview: {
