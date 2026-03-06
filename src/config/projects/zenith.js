@@ -46,7 +46,7 @@ export const zenith = {
   },
 
   form: {
-  scriptUrl: "https://script.google.com/macros/s/AKfycbwH2geqPRgkZtVI5cmnDKWhjy8JJBDzFSdTHSB9pUzJLFWnh-CxYNpsg-6es5F9O4MQdA/exec",
+  scriptUrl: "https://script.google.com/macros/s/AKfycbz3jcyUoQFfhPMwhvN8IZXCd63fKxD_e1yAfvhQdICM5tQDl3DZPGl_0RU_5bbouhVGzw/exec",
   budgetOptions: [
     "£1.000.000 - £1.500.000",
     "£1.750.000 - £2.000.000",
