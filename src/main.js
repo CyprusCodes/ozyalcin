@@ -398,7 +398,6 @@ if (data && data.result === "success") {
 /* =========================
    Catalog modal (PDF.js)
    ========================= */
-// Lazy-load PDF.js only when catalog is opened
 let pdfjsLib = null;
 let pdfWorkerUrl = null;
 
@@ -413,6 +412,7 @@ async function ensurePdfJs() {
 
   pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 }
+
 const openCatalogBtn = document.getElementById("openCatalogBtn");
 const catalogModal = document.getElementById("catalogModal");
 const catalogClose = document.getElementById("catalogClose");
@@ -448,25 +448,31 @@ async function renderPage(num) {
   if (isRendering) return;
   isRendering = true;
 
-  const page = await pdfDoc.getPage(num);
+  try {
+    const page = await pdfDoc.getPage(num);
 
-  // Responsive width: scales canvas based on viewport width
-  const stageWidth = Math.min(window.innerWidth * 0.70, 840);
-  const viewport0 = page.getViewport({ scale: 1 });
-  const scale = stageWidth / viewport0.width;
-  const viewport = page.getViewport({ scale });
+    const stageWidth = Math.min(window.innerWidth * 0.70, 840);
+    const viewport0 = page.getViewport({ scale: 1 });
+    const scale = stageWidth / viewport0.width;
+    const viewport = page.getViewport({ scale });
 
-  const ctx = catalogCanvas.getContext("2d");
-  catalogCanvas.width = Math.floor(viewport.width);
-  catalogCanvas.height = Math.floor(viewport.height);
+    const ctx = catalogCanvas.getContext("2d");
+    catalogCanvas.width = Math.floor(viewport.width);
+    catalogCanvas.height = Math.floor(viewport.height);
 
-  await page.render({ canvasContext: ctx, viewport }).promise;
 
-  if (catalogPageInfo) catalogPageInfo.textContent = `${pageNum} / ${pdfDoc.numPages}`;
-  if (catalogPrev) catalogPrev.disabled = pageNum <= 1;
-  if (catalogNext) catalogNext.disabled = pageNum >= pdfDoc.numPages;
+    await page.render({
+      canvasContext: ctx,
+      viewport,
+      imageLayer: true
+    }).promise;
 
-  isRendering = false;
+    if (catalogPageInfo) catalogPageInfo.textContent = `${pageNum} / ${pdfDoc.numPages}`;
+    if (catalogPrev) catalogPrev.disabled = pageNum <= 1;
+    if (catalogNext) catalogNext.disabled = pageNum >= pdfDoc.numPages;
+  } finally {
+    isRendering = false;
+  }
 }
 
 async function openCatalog(pdfUrl) {
@@ -479,9 +485,21 @@ async function openCatalog(pdfUrl) {
 
   await ensurePdfJs();
 
-  pdfDoc = await pdfjsLib.getDocument(pdfUrl).promise;
-  pageNum = 1;
-  await renderPage(pageNum);
+  try {
+    pdfDoc = await pdfjsLib.getDocument({
+      url: pdfUrl,
+      rangeChunkSize: 65536,
+      disableAutoFetch: false,
+      withCredentials: false
+    }).promise;
+
+    pageNum = 1;
+    await renderPage(pageNum);
+  } catch (error) {
+    console.error("PDF yükleme hatası:", error);
+    alert("PDF yüklenemedi. Lütfen tekrar deneyin.");
+    hideCatalogModal();
+  }
 }
 
 function nextPage() {
@@ -503,7 +521,6 @@ openCatalogBtn?.addEventListener("click", (e) => {
 
 catalogClose?.addEventListener("click", hideCatalogModal);
 
-// Click outside content closes modal
 catalogModal?.addEventListener("click", (e) => {
   if (e.target === catalogModal) hideCatalogModal();
 });
@@ -511,7 +528,6 @@ catalogModal?.addEventListener("click", (e) => {
 catalogPrev?.addEventListener("click", prevPage);
 catalogNext?.addEventListener("click", nextPage);
 
-// Keyboard controls while modal is open
 window.addEventListener("keydown", (e) => {
   if (!catalogModal || catalogModal.getAttribute("aria-hidden") === "true") return;
   if (e.key === "Escape") hideCatalogModal();
