@@ -413,6 +413,7 @@ async function ensurePdfJs() {
   pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 }
 
+
 const openCatalogBtn = document.getElementById("openCatalogBtn");
 const catalogModal = document.getElementById("catalogModal");
 const catalogClose = document.getElementById("catalogClose");
