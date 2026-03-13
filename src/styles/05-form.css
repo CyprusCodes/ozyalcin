@@ -77,6 +77,54 @@
   grid-template-columns: 1fr;
   gap: 10px;
 }
+.form select {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+
+  outline: none;
+  box-shadow: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form select:focus {
+  border-color: rgba(242, 194, 0, 0.95);
+  box-shadow: 0 0 0 4px rgba(242, 194, 0, 0.18);
+}
+.form select:invalid {
+  color: var(--muted);
+}
+
+.form select:valid {
+  color: var(--text);
+}
+.form label:has(select) {
+  position: relative;
+}
+
+.form label:has(select)::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #6b7280;
+  border-bottom: 2px solid #6b7280;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
 
 @media (min-width: 560px) {
   .radioGrid {
@@ -178,4 +226,99 @@
   text-align: center;
   border: 1px solid #b7e4c7;
     display: none;
+}
+/* =========================
+   FORM TEXT UNIFICATION
+   (override)
+   ========================= */
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  color: #6b7280;
+  padding: 12px 14px;
+
+  outline: none;
+  box-shadow: none;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  opacity: 1;
+}
+
+/* Select styling */
+
+.form select {
+  height: 50px;
+  padding-right: 44px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* keep select text same style */
+
+.form select:invalid {
+  color: #6b7280;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form select:valid {
+  color: #6b7280;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color:var(--text);
+}
+
+/* focus state same as inputs */
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  border-color: rgba(242, 194, 0, 0.95);
+  box-shadow: 0 0 0 4px rgba(242, 194, 0, 0.18);
+}
+
+/* custom dropdown arrow */
+
+.form label:has(select) {
+  position: relative;
+}
+
+.form label:has(select)::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  width: 8px;
+  height: 8px;
+
+  border-right: 2px solid #6b7280;
+  border-bottom: 2px solid #6b7280;
+
+  transform: rotate(45deg);
+  pointer-events: none;
 }

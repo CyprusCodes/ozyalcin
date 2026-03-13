@@ -201,16 +201,15 @@ class="project" data-project="">
                 inputmode="tel" required />
             </label>
 
-            <fieldset class="formGroup" aria-describedby="budgetHelp">
-              <legend>
-                <span class="labelText">
-                  Villa alımı için planladığınız bütçe aralığı nedir? <span class="required">*</span>
-                </span>
-              </legend>
+            <label for="budget">
+              <span class="labelText">
+                Villa alımı için planladığınız bütçe aralığı nedir? <span class="required">*</span>
+              </span>
 
-              <div class="radioGrid" id="budgetOptions">
-              </div>
-            </fieldset>
+              <select id="budget" name="budget" required>
+                <option value="" disabled selected>Bütçe aralığı seçiniz.</option>
+              </select>
+            </label>
 
             <label for="contactTime">
               <span class="labelText">
