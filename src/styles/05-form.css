@@ -322,3 +322,25 @@
   transform: rotate(45deg);
   pointer-events: none;
 }
+/* =========================
+   FORM TEXT COLOR FIX
+   ========================= */
+
+.form input,
+.form textarea,
+.form select {
+  color: #000;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form select:valid {
+  color: #000;
+}
+
+.form select:invalid {
+  color: #9ca3af;
+}
