@@ -57,7 +57,7 @@ export const solea = {
   },
 
   form: {
-  scriptUrl: "https://script.google.com/macros/s/AKfycbxrJT2Uf8GjCzY2alKTosnkFL9Nj8JzvgbweLhe5GpgdlUqNiPgeZsFarubPXym_YSw/exec"
+  scriptUrl: "https://script.google.com/macros/s/AKfycbyUepudRTFNfs_ZPQFO8BJCwgcbhN8dGwr2mV2mzKfAdFsnjVQr6DudKVgm3HUEcrpQFw/exec"
 },
 
   catalog: {

@@ -9,7 +9,7 @@ const projects = {
 };
 
 const activeProjectKey =
-  import.meta.env.VITE_ACTIVE_PROJECT || "cassaOliva2";
+  import.meta.env.VITE_ACTIVE_PROJECT || "casaOliva2";
 
 export const activeProject = projects[activeProjectKey];
 
