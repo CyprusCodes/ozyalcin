@@ -45,31 +45,31 @@ function setDataFull(id, value) {
    ========================= */
 
 
-   function applyProjectConfig(p) {
- //project by project budget options
+function applyProjectConfig(p) {
+  //project by project budget options
   function applyBudgetOptions(project) {
-  const budgetSelect = document.getElementById("budget");
-  if (!budgetSelect) return;
+    const budgetSelect = document.getElementById("budget");
+    if (!budgetSelect) return;
 
-  const DEFAULT_BUDGETS = [
-    "£400.000 – £500.000",
-    "£600.000 – £700.000",
-    "£800.000 – £900.000",
-    "£1.000.000 ve üzeri",
-  ];
+    const DEFAULT_BUDGETS = [
+      "£400.000 – £500.000",
+      "£600.000 – £700.000",
+      "£800.000 – £900.000",
+      "£1.000.000 ve üzeri",
+    ];
 
-  const options = project?.form?.budgetOptions?.length
-    ? project.form.budgetOptions
-    : DEFAULT_BUDGETS;
+    const options = project?.form?.budgetOptions?.length
+      ? project.form.budgetOptions
+      : DEFAULT_BUDGETS;
 
-  budgetSelect.innerHTML = `
+    budgetSelect.innerHTML = `
     <option value="" disabled selected>Bütçe aralığı seçiniz.</option>
     ${options.map((text) => `<option value="${text}">${text}</option>`).join("")}
   `;
-}
- //active project budgets
-applyBudgetOptions(activeProject);
-    // Meta (Tab title + description)
+  }
+  //active project budgets
+  applyBudgetOptions(activeProject);
+  // Meta (Tab title + description)
   if (p.meta?.title) {
     document.title = p.meta.title;
 
@@ -197,28 +197,12 @@ applyBudgetOptions(activeProject);
 
 
 applyProjectConfig(activeProject);
-// Google Ads tag (SADECE ZENITH)
-if (activeProject?.key === "zenith") {
-  const script1 = document.createElement("script");
-  script1.async = true;
-  script1.src = "https://www.googletagmanager.com/gtag/js?id=AW-18038010310";
-  document.head.appendChild(script1);
-
-  const script2 = document.createElement("script");
-  script2.innerHTML = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18038010310');
-  `;
-  document.head.appendChild(script2);
-}
 
 // Footer brand logo
 setSrc("footerBrandlogo", activeProject.header?.brandLogo);
 
 // Adds a project-specific class like: p-solea / p-zenith etc.
-if (activeProject?.slug){
+if (activeProject?.slug) {
   document.body.classList.add(`p-${activeProject.slug}`);
 }
 
@@ -232,8 +216,8 @@ const fpSection = document.getElementById("kat-planlari");
 const hasFloorPlans =
   !!activeProject.floorPlans &&
   (Array.isArray(activeProject.floorPlans.aImages) && activeProject.floorPlans.aImages.length > 0 ||
-   Array.isArray(activeProject.floorPlans.bImages) && activeProject.floorPlans.bImages.length > 0 ||
-   Array.isArray(activeProject.floorPlans.cImages) && activeProject.floorPlans.cImages.length > 0);
+    Array.isArray(activeProject.floorPlans.bImages) && activeProject.floorPlans.bImages.length > 0 ||
+    Array.isArray(activeProject.floorPlans.cImages) && activeProject.floorPlans.cImages.length > 0);
 
 if (fpSection) {
   fpSection.style.display = hasFloorPlans ? "block" : "none";
@@ -273,13 +257,13 @@ if (hasFloorPlans) {
 
 if (Array.isArray(activeProject.hero?.miniCards) && activeProject.hero.miniCards.length >= 3) {
   setText("heroMiniTitle1", activeProject.hero.miniCards[0].title);
-  setText("heroMiniText1",  activeProject.hero.miniCards[0].text);
+  setText("heroMiniText1", activeProject.hero.miniCards[0].text);
 
   setText("heroMiniTitle2", activeProject.hero.miniCards[1].title);
-  setText("heroMiniText2",  activeProject.hero.miniCards[1].text);
+  setText("heroMiniText2", activeProject.hero.miniCards[1].text);
 
   setText("heroMiniTitle3", activeProject.hero.miniCards[2].title);
-  setText("heroMiniText3",  activeProject.hero.miniCards[2].text);
+  setText("heroMiniText3", activeProject.hero.miniCards[2].text);
 }
 
 /* =========================
@@ -357,10 +341,10 @@ if (form) {
 
     const script_url = activeProject?.form?.scriptUrl;
 
-if (!script_url) {
-  alert("Form bağlantısı tanımlı değil.");
-  return;
-}
+    if (!script_url) {
+      alert("Form bağlantısı tanımlı değil.");
+      return;
+    }
 
     const btn = form.querySelector('button[type="submit"]');
     const original_btn_text = btn ? btn.textContent : "";
@@ -380,15 +364,15 @@ if (!script_url) {
 
       const data = await res.json();
 
-if (data && data.result === "success") {
+      if (data && data.result === "success") {
 
-  const successMessage = document.getElementById("formSuccess");
+        const successMessage = document.getElementById("formSuccess");
 
-  if (successMessage) {
-    successMessage.style.display = "block";
-  }
+        if (successMessage) {
+          successMessage.style.display = "block";
+        }
 
-  form.reset();
+        form.reset();
 
       } else {
         alert("Bir hata oluştu. Lütfen tekrar deneyin.");
