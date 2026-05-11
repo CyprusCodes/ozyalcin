@@ -8,3 +8,44 @@
 @import "./styles/07-slider.css";
 @import "./styles/08-gallery-lightbox.css";
 @import "./styles/09-footer.css";
+.floating-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: #20bd5a;
+  box-shadow: 0 16px 34px rgba(37, 211, 102, 0.45);
+}
+
+.floating-whatsapp-icon {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .floating-whatsapp {
+    right: 18px;
+    bottom: 18px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .floating-whatsapp-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
