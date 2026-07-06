@@ -309,4 +309,26 @@
   .nav.is-open a:hover {
     background: rgba(242, 194, 0, 0.14);
   }
+    #nav .appointmentCta::before,
+    #nav .appointmentCta::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    #nav .appointmentCta:hover::before,
+    #nav .appointmentCta:hover::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    #nav .appointmentCta,
+    #nav .appointmentCta:hover,
+    #nav .appointmentCta:focus,
+    #nav .appointmentCta:active {
+      color: #222222 !important;
+      text-decoration: none !important;
+      border-bottom: none !important;
+    }
+
+
 }

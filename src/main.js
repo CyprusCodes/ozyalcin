@@ -198,6 +198,48 @@ function applyProjectConfig(p) {
 
 applyProjectConfig(activeProject);
 
+function addAppointmentCta(project) {
+  if (project?.key !== "solea") return;
+
+  const nav = document.getElementById("nav");
+  if (!nav) return;
+
+  if (nav.querySelector(".appointmentCta")) return;
+
+  const cta = document.createElement("a");
+  cta.href = project.appointmentCta?.href || "https://randevu.ozyalcinconstruction.com";
+  cta.textContent = project.appointmentCta?.text || "Randevu Al";
+  cta.target = "_blank";
+  cta.rel = "noopener noreferrer";
+  cta.className = "appointmentCta";
+ cta.style.cssText = `
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: #EAB900;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-bottom: none;
+  box-shadow: 0 8px 18px rgba(212, 177, 42, 0.25);
+  white-space: nowrap;
+  box-sizing: border-box;
+`;
+cta.style.setProperty("color", "#222222", "important");
+cta.style.setProperty("text-decoration", "none", "important");
+cta.style.setProperty("border-bottom", "none", "important");
+
+  nav.appendChild(cta);
+}
+
+addAppointmentCta(activeProject);
+
 // Footer brand logo
 setSrc("footerBrandlogo", activeProject.header?.brandLogo);
 
