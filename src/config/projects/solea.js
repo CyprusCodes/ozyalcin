@@ -124,5 +124,9 @@ export const solea = {
   },
   footer: {
     footerBrandlogo: `${base}/brand/ozyalcinlogo.webp`,
-  }
+  },
+  appointmentCta: {
+  text: "Randevu Al",
+  href: "https://randevu.ozyalcinconstruction.com",
+},
 };
